@@ -1,0 +1,1 @@
+(()=>{"use strict";let e=document.querySelector("#content");console.log(e)})();
