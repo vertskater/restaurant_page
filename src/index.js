@@ -1,3 +1,5 @@
 'use strict'
-let content = document.querySelector('#content');
-console.log(content);
+import "./main.min.css";
+
+const content = document.querySelector('#content');
+console.log(content)

@@ -1,4 +1,6 @@
 const path = require('path');
+const { merge } = require("webpack-merge");
+const parts = require("./webpack.parts")
 
 module.exports = {
   mode: 'production',
@@ -8,3 +10,9 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
 };
+const commonCofig = merge([
+  { entry: ["./src"] },
+  parts.loadCSS(),
+])
+
+module.exports = commonCofig;
