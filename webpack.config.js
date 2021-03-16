@@ -12,7 +12,8 @@ module.exports = {
 };
 const commonCofig = merge([
   { entry: ["./src"] },
-  parts.loadCSS(),
+  //parts.loadCSS(),
+  parts.extractCSS(),
 ])
 
 module.exports = commonCofig;
