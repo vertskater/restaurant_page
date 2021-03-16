@@ -1,6 +1,7 @@
 const path = require('path');
 const { merge } = require("webpack-merge");
-const parts = require("./webpack.parts")
+const parts = require("./webpack.parts");
+//const GoogleFontsPlugin = require("google-fonts-webpack-plugin")
 
 module.exports = {
   mode: 'production',

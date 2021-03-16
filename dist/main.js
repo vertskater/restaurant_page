@@ -1,1 +1,1 @@
-(()=>{"use strict";const t=document.querySelector("#content");console.log(t),t.textContent="Hallo World"})();
+(()=>{"use strict";!function(){const e=document.querySelector("#content"),t=document.createElement("header"),n=document.createElement("h1"),a=document.createElement("span");n.textContent="Welcome to Pachamama",a.textContent="Best Restaurant in Town",e.appendChild(t),t.appendChild(n),t.appendChild(a)}()})();

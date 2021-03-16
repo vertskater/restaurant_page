@@ -1,12 +1,26 @@
-$font-handwriting: 'Caveat', cursive;
-$font-standard: 
+$font-handwriting: "Caveat", cursive;
+$font-Standard: "Crimson Text", serif;
+$font-color: #fff;
 
-*{
+* {
     box-sizing: border-box;
-}
-html{
     margin: 0;
 }
-body {
-    
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: $font-color;
+    font-size: 5vw;
+    //background-image: url();
+    //background-color: rgba(172, 242, 94, 0.5);
+    background-size: cover;
+    background-position: top center;
+    height: 100vh;
+    text-shadow: 2px 2px black;
+    h1 {
+        font-family: $font-handwriting;
+    }
 }

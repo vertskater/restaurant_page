@@ -7,7 +7,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 //          ],
 //      },
 //  });
-
 exports.extractCSS = ({ options = {}, loaders = [] } = {}) =>{
     return {
         module: {
