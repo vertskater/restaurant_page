@@ -1,12 +1,21 @@
+import {createHtml} from './createhtml';
+let htmlTags = [
+    'header',
+    'h1',
+    'span',
+    'span'
+]
+let htmlItemsHeader = createHtml(htmlTags);
+
 export default function startPage(){
     const content = document.querySelector('#content');
-    const header = document.createElement('header');
-    const htmlHeader1 = document.createElement('h1');
-    const htmlSpan = document.createElement('span');
-    htmlHeader1.textContent = "Welcome to Pachamama";
-    htmlSpan.textContent = "Best Restaurant in Town";
-    content.appendChild(header);
-    header.appendChild(htmlHeader1);
-    header.appendChild(htmlSpan);
+    htmlItemsHeader[1].textContent = "Welcome to Pachamama";
+    htmlItemsHeader[2].textContent = "Best Restaurant in Town";
+    htmlItemsHeader[3].textContent = 'Pachamama';
+    htmlItemsHeader[3].classList.add('logo');
+    content.appendChild(htmlItems[0]);
+    for(let i = 1; i<htmlItems.length;i++){
+        htmlItemsHeader[0].appendChild(htmlItemsHeader[i]);
+    }
 }
 
