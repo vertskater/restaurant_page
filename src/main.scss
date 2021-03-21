@@ -1,6 +1,8 @@
 $font-handwriting: "Caveat", cursive;
 $font-Standard: "Crimson Text", serif;
 $font-color: #fff;
+$main-color: #FF7F50;
+$main-color-light: #FFB597;
 
 * {
     box-sizing: border-box;
@@ -23,15 +25,75 @@ header {
     h1 {
         font-family: $font-handwriting;
     }
-    .logo{
+    >span{
+        margin-bottom: 60px;
+    }
+    .logo {
         font-family: $font-handwriting;
         position: absolute;
         top: 2%;
         left: 2%;
         font-size: 20pt;
         display: inline-block;
-        border: solid 2px coral;
+        border: solid 2px $main-color;
         padding: 10px;
-        background-color: rgba(255,127,80,.2);
+        background-color: rgba(255, 127, 80, 0.2);
+    }
+    
+}
+main {
+    .intro {
+        padding: 50px 5%;
+        background-color: $main-color-light;
+        h2{
+            margin: 20px 0;
+            font-family: $font-handwriting;
+            color: $font-color;
+            font-size: 5vw;
+            text-align: center;
+            text-shadow: 2px 2px black;
+        }
+        .column-2{
+            width: 100%;
+            > h3{
+                text-align: center;
+                font-family: $font-Standard;
+                color: #222;
+                font-size: 1.2em;
+                margin: 10px 0;
+            }
+            > div {
+                display: flex;
+                justify-content: center;
+                img {
+                    width: 60%;
+                    border-radius: 50%;
+                    border: 5px solid $main-color;
+                }
+            }
+            p{
+                margin: 20px 0;
+                font-size: 1.4em;
+            }
+        }
+        &::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+    }
+
+}
+@media only screen and (min-width: 768px){
+    main{
+        .intro{
+            .column-2{
+                width: 50%;
+                float: left;
+                p{
+                    padding: 10px;
+                }
+            }
+        }  
     }
 }
