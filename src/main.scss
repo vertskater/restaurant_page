@@ -43,7 +43,7 @@ header {
 }
 main {
     .intro {
-        padding: 50px 5%;
+        padding: 50px 5% 150px;
         background-color: $main-color-light;
         h2{
             margin: 20px 0;
@@ -83,6 +83,28 @@ main {
         }
     }
 
+}
+footer{
+    height: 100px;
+    background-color: $main-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .svg-inline--fa{
+        font-size: 1.5em;
+        color: $main-color-light;
+        margin: 0 5px 0 5px;
+        cursor: pointer;
+        transition: transform 300ms ease-in-out;
+        &:hover{
+            transform: scale(2);
+        }
+    }
+    #svg{
+        position: absolute;
+        bottom: 80px;
+    }
 }
 @media only screen and (min-width: 768px){
     main{
