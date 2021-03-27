@@ -20,12 +20,16 @@ let numberingsAddClasses = [
 ]
 export default function startPage() {
     const content = document.querySelector('#content');
+    const start1 = document.createElement('div');
+    start1.id = 'content1';
+    start1.classList.add('tabcontent')
+    content.appendChild(start1);
     //Append Content with html tags
     //Header
-    content.appendChild(htmlItemsHeader[0]);
+    start1.appendChild(htmlItemsHeader[0]);
     helper.appendItems(numberingsCreateTags[0], htmlItemsHeader[0], htmlItemsHeader);
-    //Create Teaser-Tags
-    content.appendChild(htmlItemsTeaser[0]);
+    //Append Teaser-Tags
+    start1.appendChild(htmlItemsTeaser[0]);
     htmlItemsTeaser[0].appendChild(htmlItemsTeaser[1]);
     helper.appendItems(numberingsCreateTags[2], htmlItemsTeaser[1], htmlItemsTeaser);
     helper.appendItems(numberingsCreateTags[1], htmlItemsTeaser[3], htmlItemsTeaser);
@@ -34,8 +38,8 @@ export default function startPage() {
     htmlItemsTeaser[10].appendChild(htmlItemsTeaser[11]);
     //Add Footer-Tags
     //Add Footer SVG Wave
-    const svg = helper.createFooterWave();
-    content.appendChild(htmlItemsFooter[0]);
+    const svg = helper.createFooterWave("M0,96L80,112C160,128,320,160,480,186.7C640,213,800,235,960,213.3C1120,192,1280,128,1360,96L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z");
+    start1.appendChild(htmlItemsFooter[0]);
     helper.appendItems(numberingsCreateTags[4], htmlItemsFooter[0], htmlItemsFooter);
     htmlItemsFooter[0].appendChild(svg);
     //Fill html tags with content

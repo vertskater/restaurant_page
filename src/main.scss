@@ -1,15 +1,42 @@
 $font-handwriting: "Caveat", cursive;
 $font-Standard: "Crimson Text", serif;
 $font-color: #fff;
-$main-color: #FF7F50;
-$main-color-light: #FFB597;
+$main-color: #ff7f50;
+$main-color-light: #ffb597;
 
 * {
     box-sizing: border-box;
     margin: 0;
     scroll-behavior: smooth;
 }
+// Nav styling
+nav {
+    height: 100px;
+    background-color: $main-color;
+    font-size: 1.5em;
+    font-family: $font-handwriting;
+    ul {
+        height: 100px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-left: 0;
+        li {
+            list-style-type: none;
+            cursor: pointer;
+            display: inline-block;
+            transition: all 200ms ease-out;
+            &:hover {
+                transform: scale(1.5);
+            }
+            &.active {
+                color: $main-color-light;
+            }
+        }
+    }
+}
 
+/*Home Styling*/
 header {
     display: flex;
     justify-content: center;
@@ -26,13 +53,13 @@ header {
     h1 {
         font-family: $font-handwriting;
     }
-    >span{
+    > span {
         margin-bottom: 60px;
     }
     .logo {
         font-family: $font-handwriting;
         position: absolute;
-        top: 2%;
+        top: 110px;
         left: 2%;
         font-size: 20pt;
         display: inline-block;
@@ -40,13 +67,12 @@ header {
         padding: 10px;
         background-color: rgba(255, 127, 80, 0.2);
     }
-    
 }
 main {
     .intro {
-        padding: 50px 5% 150px;
+        padding: 50px 5% 200px;
         background-color: $main-color-light;
-        h2{
+        h2 {
             margin: 20px 0;
             font-family: $font-handwriting;
             color: $font-color;
@@ -54,9 +80,9 @@ main {
             text-align: center;
             text-shadow: 2px 2px black;
         }
-        .column-2{
+        .column-2 {
             width: 100%;
-            > h3{
+            > h3 {
                 text-align: center;
                 font-family: $font-Standard;
                 color: #222;
@@ -72,51 +98,82 @@ main {
                     border: 5px solid $main-color;
                 }
             }
-            p{
+            p {
                 margin: 20px 0;
                 font-size: 1.4em;
             }
         }
-        &::after{
+        &::after {
             content: "";
             display: block;
             clear: both;
         }
     }
-
 }
-footer{
-    height: 100px;
+footer {
+    height: 80px;
     background-color: $main-color;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    .svg-inline--fa{
+    .svg-inline--fa {
         font-size: 1.5em;
         color: $main-color-light;
         margin: 0 5px 0 5px;
         cursor: pointer;
         transition: transform 300ms ease-in-out;
-        &:hover{
+        &:hover {
             transform: scale(2);
         }
     }
-    #svg{
+    #svg {
         position: absolute;
         bottom: 80px;
     }
 }
-@media only screen and (min-width: 768px){
-    main{
-        .intro{
-            .column-2{
+/*Menupage styling*/
+#content2 {
+    text-align: center;
+    background-color: $main-color-light;
+    .menuHeading {
+        padding: 50px 0 100px;
+        font-family: $font-handwriting;
+    }
+    .dishes-container {
+        display: flex;
+        padding: 0 5% 150px 5%;
+        flex-wrap: wrap;
+        > div {
+            width: 100%;
+            height: 200px;
+            background-color: rgba(255, 255, 255, 0.5);
+            margin: 0 5px 5px;
+        }
+    }
+}
+
+/*Mobile styling*/
+@media only screen and (min-width: 768px) {
+    main {
+        .intro {
+            .column-2 {
                 width: 50%;
                 float: left;
-                p{
+                p {
                     padding: 10px;
                 }
             }
-        }  
+        }
+    }
+    #content2 {
+        .dishes-container {
+            padding-bottom: 300px;
+            > div {
+                flex-grow: 1;
+                width: 30%;
+                width: calc(90% / 3);
+            }
+        }
     }
 }

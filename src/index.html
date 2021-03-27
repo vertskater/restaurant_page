@@ -1,47 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="main.min.css">
     <script defer src="../node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
     <title>Pachamama</title>
 </head>
+
 <body>
     <div id="content">
-        <header>
-            <span class="logo">Pachamana</span>
-            <h1>Welcome to Pachamama</h1>
-            <span>Best Restaurant in Town</span>
-        </header>
-        <main>
-            <section class="intro">
-                <h2>We love South American cuisine</h2>
-                <div class="column-2">
-                    <h3>We serve fresh and delicious food</h3>
-                    <div class="img-intro">
-                        <img src="/dist/img/chef.jpg" alt="Portrait of a cook">
+        <nav>
+            <ul>
+                <li id="tab1" class="tabmenu">Home</li>
+                <li id="tab2" class="tabmenu">Menu</li>
+                <li id="tab3" class="tabmenu">Contact</li>
+            </ul>
+        </nav>
+        <div id="content1" class="tabcontent">
+            <header>
+                <h1>Welcome to Pachamama</h1>
+                <span>Best Restaurant in Town</span>
+            </header>
+            <main>
+                <section class="intro">
+                    <h2>We love South American cuisine</h2>
+                    <div class="column-2">
+                        <h3>We serve fresh and delicious food</h3>
+                        <div class="img-intro">
+                            <img src="/dist/img/chef.jpg" alt="Portrait of a cook">
+                        </div>
+                        <p>We buy from local farms and businesses. Our chefs love to cook best and fresh South American
+                            cuisine.</p>
                     </div>
-                    <p>We buy from local farms and businesses. Our chefs love to cook best and fresh South American cuisine.</p>
-                </div>
-                <div class="column-2">
-                    <h3>Taste South American freedom</h3>
-                    <div class="img-intro">
-                        <img src="/dist/img/farmer.jpg" alt="Portrait of a cook">
+                    <div class="column-2">
+                        <h3>Taste South American freedom</h3>
+                        <div class="img-intro">
+                            <img src="/dist/img/farmer.jpg" alt="Portrait of a cook">
+                        </div>
+                        <p>We work with local Farmers. The wellbeing our farmers is very important to us and we have a
+                            healthy reletionship with our suppliers</p>
                     </div>
-                    <p>We work with local Farmers. The wellbeing our farmers is very important to us and we have a healthy reletionship with our suppliers</p>
-                </div>
-            </section>
-        </main>
+                </section>
+            </main>
+        </div>
+        <div id="content2" class="tabcontent">
+            Content of the second tab.
+        </div>
         <footer>
             <i class="fab fa-facebook-f"></i>
             <i class="fab fa-twitter"></i>
             <i class="fab fa-instagram"></i>
         </footer>
     </div>
+    <script>
+        const tabcontents = document.querySelectorAll('.tabcontent')
+        for (let i = 0; i < tabcontents.length; i++) {
+            tabcontents[i].style.display = 'none';
+        }
+        tabcontents[0].style.display = 'block';
+        const tabs = document.querySelectorAll('.tabmenu');
+        for (let tab of tabs) {
+            tab.addEventListener('click', () => {
+                for (let i = 0; i < tabcontents.length; i++) {
+                    tabcontents[i].style.display = 'none';
+                }
+                for(let i = 0; i < tabs.length; i++){
+                    tabs[i].className = 'classmenu';
+                }
+                if (tab.id === 'tab1') {
+                    tabcontents[0].style.display = 'block';
+                    tab.className = 'classmenu active';
+                } else if (tab.id === 'tab2') {
+                    tabcontents[1].style.display = 'block';
+                    tab.className = 'classmenu active';
+                } else if (tab.id === 'tab3') {
+                    console.log('you clicked tab3');
+                    tab.className = 'classmenu active';
+                }
+            })
+        }
+    </script>
 </body>
+
 </html>
