@@ -52,5 +52,4 @@ export default function menuPage(){
     htmlItemsFooter[1].className = 'fab fa-facebook-f';
     htmlItemsFooter[2].className = 'fab fa-twitter';
     htmlItemsFooter[3].className = 'fab fa-instagram';
-
 }

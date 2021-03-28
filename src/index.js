@@ -2,6 +2,7 @@
 import './main.min.css';
 import startPage from './modules/start';
 import menuPage from './modules/menu';
+import contactPage from './modules/contact';
 import * as helper from './modules/functions';
 import { htmlTagsTabs, htmlTabsContent } from './modules/content';
 import '@fortawesome/fontawesome-free/js/fontawesome';
@@ -26,6 +27,7 @@ for (let i = 2; i < htmlItemsTabs.length; i++) {
 
 startPage();
 menuPage();
+contactPage();
 const tabcontents = document.querySelectorAll('.tabcontent')
 const tabs = document.querySelectorAll('.tabmenu');
 helper.tabLogic(tabcontents, tabs);

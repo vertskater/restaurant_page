@@ -42,6 +42,8 @@ const tabLogic = (tabcontent, tabmenu) => {
     }
     tabcontents[0].style.display = 'block';
     const tabs = tabmenu;
+    const nav = document.querySelector('nav');
+    console.log(nav);
     for (let tab of tabs) {
         tab.addEventListener('click', () => {
             for (let i = 0; i < tabcontents.length; i++) {
@@ -52,12 +54,15 @@ const tabLogic = (tabcontent, tabmenu) => {
             }
             if (tab.id === 'tab1') {
                 tabcontents[0].style.display = 'block';
+                nav.style.backgroundColor = '#ff7f50';
                 tab.className = 'classmenu active';
             } else if (tab.id === 'tab2') {
                 tabcontents[1].style.display = 'block';
+                nav.style.backgroundColor = '#008080';
                 tab.className = 'classmenu active';
             } else if (tab.id === 'tab3') {
-                console.log('you clicked tab3');
+                tabcontents[2].style.display = 'block';
+                nav.style.backgroundColor = '#4a83b6'
                 tab.className = 'classmenu active';
             }
         })

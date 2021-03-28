@@ -3,6 +3,7 @@ let htmlTagsTeaser = ['main','section','h2','div','h3','div','img','p','div','h3
 let htmlTagsFooter = ['footer','i','i','i'];
 let htmlTagsTabs = ['nav', 'ul', 'li', 'li', 'li'];
 let htmlTagsMenu = ['h1', 'div', 'div','div','div','div','div','div','div','div','div','div','div','div', 'img','img','img','img','img','img',];
+let htmlTagsContact = ['h1'];
 
 let htmlHeaderContent = [
     'Welcome to Pachamama',
@@ -28,7 +29,11 @@ let htmlMenuContent = [
     'Potato Skewer - € 6,00',
     'Burger - € 7,80',
 ]
-
+let htmlContactContent = [
+    'Say Hello',
+    'We are happy to answer',
+    'Pachamama'
+]
 let classesTeaser = [
     'intro','column-2','img-intro', 'column-2', 'img-intro'
 ]
@@ -36,6 +41,6 @@ let classesMenu = [
     'dishes-item','dishes-item','dishes-item','dishes-item','dishes-item','dishes-item'
 ]
 
-export {htmlTagsHeader, htmlTagsTeaser, htmlTagsFooter, htmlTagsMenu, htmlTagsTabs, 
-    htmlHeaderContent, htmlTeaserContent, htmlTabsContent, htmlMenuContent, 
+export {htmlTagsHeader, htmlTagsTeaser, htmlTagsFooter, htmlTagsMenu, htmlTagsTabs, htmlTagsContact,
+    htmlHeaderContent, htmlTeaserContent, htmlTabsContent, htmlMenuContent, htmlContactContent,
     classesTeaser, classesMenu};

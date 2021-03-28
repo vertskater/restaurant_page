@@ -37,79 +37,81 @@ nav {
 }
 
 /*Home Styling*/
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: $font-color;
-    font-size: 5vw;
-    background-color: rgba(172, 242, 94, 0.5);
-    background-image: url(https://github.com/vertskater/restaurant_page/blob/next/dist/img/header.jpg?raw=true);
-    background-size: cover;
-    background-position: top center;
-    height: 100vh;
-    text-shadow: 2px 2px black;
-    h1 {
-        font-family: $font-handwriting;
-    }
-    > span {
-        margin-bottom: 60px;
-    }
-    .logo {
-        font-family: $font-handwriting;
-        position: absolute;
-        top: 110px;
-        left: 2%;
-        font-size: 20pt;
-        display: inline-block;
-        border: solid 2px $main-color;
-        padding: 10px;
-        background-color: rgba(255, 127, 80, 0.2);
-    }
-}
-main {
-    .intro {
-        padding: 50px 5% 200px;
-        background-color: $main-color-light;
-        h2 {
-            margin: 20px 0;
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: $font-color;
+        font-size: 5vw;
+        background-color: rgba(172, 242, 94, 0.5);
+        background-image: url(https://github.com/vertskater/restaurant_page/blob/next/dist/img/header.jpg?raw=true);
+        background-size: cover;
+        background-position: top center;
+        height: 100vh;
+        text-shadow: 2px 2px black;
+        h1 {
             font-family: $font-handwriting;
-            color: $font-color;
-            font-size: 5vw;
-            text-align: center;
-            text-shadow: 2px 2px black;
         }
-        .column-2 {
-            width: 100%;
-            > h3 {
+        > span {
+            margin-bottom: 60px;
+        }
+        .logo {
+            font-family: $font-handwriting;
+            position: absolute;
+            top: 110px;
+            left: 2%;
+            font-size: 20pt;
+            display: inline-block;
+            border: solid 2px $main-color;
+            padding: 10px;
+            background-color: rgba(255, 127, 80, 0.2);
+        }
+    }
+    main {
+        .intro {
+            padding: 50px 5% 200px;
+            background-color: $main-color-light;
+            h2 {
+                margin: 20px 0;
+                font-family: $font-handwriting;
+                color: $font-color;
+                font-size: 5vw;
                 text-align: center;
-                font-family: $font-Standard;
-                color: #222;
-                font-size: 1.2em;
-                margin: 10px 0;
+                text-shadow: 2px 2px black;
             }
-            > div {
-                display: flex;
-                justify-content: center;
-                img {
-                    width: 60%;
-                    border-radius: 50%;
-                    border: 5px solid $main-color;
+            .column-2 {
+                width: 100%;
+                > h3 {
+                    text-align: center;
+                    font-family: $font-Standard;
+                    color: #222;
+                    font-size: 1.2em;
+                    margin: 10px 0;
+                }
+                > div {
+                    display: flex;
+                    justify-content: center;
+                    img {
+                        width: 60%;
+                        border-radius: 50%;
+                        border: 5px solid $main-color;
+                    }
+                }
+                p {
+                    margin: 20px 0;
+                    font-size: 1.4em;
                 }
             }
-            p {
-                margin: 20px 0;
-                font-size: 1.4em;
+            &::after {
+                content: "";
+                display: block;
+                clear: both;
             }
         }
-        &::after {
-            content: "";
-            display: block;
-            clear: both;
-        }
     }
-}
+
 footer {
     height: 80px;
     background-color: $main-color;
@@ -153,26 +155,26 @@ footer {
             margin: 0 5px 5px;
             overflow: hidden;
             border: 5px solid $main-color;
-            img{
-                width: 110%; 
-                transition: all 300ms ease-in-out; 
+            img {
+                width: 110%;
+                transition: all 300ms ease-in-out;
                 position: absolute;
                 top: -40%;
                 bottom: -5%;
                 right: -5%;
                 left: -5%;
-                &:hover{
+                &:hover {
                     transform: scale(1.1);
                 }
             }
-            >div{
+            > div {
                 pointer-events: none;
                 position: absolute;
                 top: 0;
                 bottom: 0;
                 right: 0;
                 left: 0;
-                background-color: rgba(100, 100, 100, .5);
+                background-color: rgba(100, 100, 100, 0.5);
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -187,6 +189,11 @@ footer {
     }
 }
 
+#content3 {
+    header{
+        //background-image: url();
+    }
+}
 /*Mobile styling*/
 @media only screen and (min-width: 768px) {
     main {
@@ -200,10 +207,9 @@ footer {
             }
         }
     }
-   
 }
 
-@media only screen and (min-width: 990px){
+@media only screen and (min-width: 990px) {
     #content2 {
         .dishes-container {
             padding-bottom: 300px;
@@ -211,7 +217,7 @@ footer {
                 flex-grow: 1;
                 width: 30%;
                 width: calc(90% / 3);
-                img{
+                img {
                     top: 0;
                 }
             }
