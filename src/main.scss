@@ -274,9 +274,12 @@ footer {
         }
     }
 }
-@media only screen and(min-width:1290px){
+@media only screen and(min-width: 1290px){
     main{
-        padding-bottom: 300px
+        .intro{
+            padding:50px 5% 300px
+        }
+        
     }
     #content2 {
         .dishes-container {
