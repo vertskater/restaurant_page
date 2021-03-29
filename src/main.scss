@@ -274,3 +274,21 @@ footer {
         }
     }
 }
+@media only screen and(min-width:1290px){
+    main{
+        padding-bottom: 300px
+    }
+    #content2 {
+        .dishes-container {
+            padding-bottom: 600px;
+        }
+    }
+    #content3{
+        main{
+            button{
+                margin-bottom: 200px;
+            }
+        }
+    }
+
+}
