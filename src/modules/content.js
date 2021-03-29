@@ -3,7 +3,7 @@ let htmlTagsTeaser = ['main','section','h2','div','h3','div','img','p','div','h3
 let htmlTagsFooter = ['footer','i','i','i'];
 let htmlTagsTabs = ['nav', 'ul', 'li', 'li', 'li'];
 let htmlTagsMenu = ['h1', 'div', 'div','div','div','div','div','div','div','div','div','div','div','div', 'img','img','img','img','img','img',];
-let htmlTagsContact = ['h1'];
+let htmlTagsContact = ['main', 'h1','form','input','input','textarea','button'];
 
 let htmlHeaderContent = [
     'Welcome to Pachamama',
@@ -32,7 +32,9 @@ let htmlMenuContent = [
 let htmlContactContent = [
     'Say Hello',
     'We are happy to answer',
-    'Pachamama'
+    'Pachamama',
+    'Tell us your consern',
+    'Submit'
 ]
 let classesTeaser = [
     'intro','column-2','img-intro', 'column-2', 'img-intro'
